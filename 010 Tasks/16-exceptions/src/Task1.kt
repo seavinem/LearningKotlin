@@ -11,8 +11,26 @@ p.s. здесь речь не идет о том, что такой вариан
 */
 
 fun main() {
+    val employees = listOf(
+        SomeEmployee("Bob", 100),
+        SomeEmployee("Robert", 50),
+        SomeEmployee("Steve", 70),
+        SomeEmployee("Joe", 110),
+        SomeEmployee("Jack", 65),
+    )
 
+   try {
+       findEmployeeBySalary(employees, 1000)
+   }
+   catch (e: Exception) {
+       println(e.message)
+   }
 }
+
+fun findEmployeeBySalary(employees: List<SomeEmployee>, age: Int): SomeEmployee {
+    return employees.find { it.salary == age } ?: throw Exception("No such employee")
+}
+
 
 class SomeEmployee(
         val name: String,

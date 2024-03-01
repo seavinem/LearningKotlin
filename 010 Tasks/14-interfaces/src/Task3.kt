@@ -7,5 +7,5 @@
 */
 
 fun main() {
-
+    val movable = listOf<Movable>(Animal(0, 0), Figure(x=1, y=1))
 }

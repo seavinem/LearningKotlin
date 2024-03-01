@@ -16,6 +16,7 @@ fun main() {
 
 }
 
+fun employeeCity(employee: Employee) = employee.company?.address?.city ?: "Неизвестен"
 class Address(val address: String, val city: String)
 class Company(val name: String, val address: Address?)
 class Employee(val name: String, val company: Company?)

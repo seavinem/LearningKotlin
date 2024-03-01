@@ -19,7 +19,19 @@ fun findEmployeeBySalary(employees: List<SomeEmployee>, age: Int): SomeEmployee?
 */
 
 fun main() {
+    val employees = listOf(
+        SomeEmployee("Bob", 100),
+        SomeEmployee("Robert", 50),
+        SomeEmployee("Steve", 70),
+        SomeEmployee("Joe", 110),
+        SomeEmployee("Jack", 65),
+        )
 
+    findEmployeeBySalary(employees, 50)?.callToClient("Alice")
+}
+
+fun findEmployeeBySalary(employees: List<SomeEmployee>, age: Int): SomeEmployee? {
+    return employees.firstOrNull { it.salary == age }
 }
 
 class SomeEmployee(
