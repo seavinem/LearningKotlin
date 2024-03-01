@@ -1,0 +1,4 @@
+Error: Database Problem DBOpenFail
+Error: Network Problem NetworkOpenFail
+Error: Database Write Failed DBWriteFail
+Error: main(): DBCloseFail

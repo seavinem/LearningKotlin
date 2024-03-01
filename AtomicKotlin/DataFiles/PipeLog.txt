@@ -1,0 +1,6 @@
+Trace: 2
+Debug: 4
+Info: 6
+Warn: 8
+Error: 10
+Error: 10
