@@ -1,4 +1,23 @@
 
+fun duplicateZeros(arr: IntArray): Unit {
+
+    val n = arr.size
+    val newArr = ArrayList<Int>(n)
+
+    for(it in arr) {
+        newArr.add(it)
+        if(it == 0) {
+            newArr.add(it)
+        }
+    }
+
+    for(i in 0..<n) {
+        arr[i] = newArr[i]
+    }
+}
+
+
+
 fun runningSum(nums: IntArray): IntArray {
     for(i in 1..<nums.size)
         nums[i] += nums[i-1]
